@@ -40,7 +40,9 @@ async function fetchMessagesFromDB(docId: string) {
             ? new HumanMessage(row.message)
             : new AIMessage(row.message)
     );
-
+    console.log(`--- fetched last ${chatHistory.length} messages successfully ---`);
+    console.log(chatHistory.map((msg) => msg.content.toString()));
+    
     return chatHistory;
 }
 
