@@ -33,7 +33,7 @@ async function fetchMessagesFromDB(docId: string) {
         FROM chat_messages
         WHERE file_id = ${docId}
         AND user_id = ${userId}
-        ORDER BY created_at DESC`;
+        ORDER BY created_at ASC`;
 
     const chatHistory = rows.map((row) =>
         row.role === "human"
