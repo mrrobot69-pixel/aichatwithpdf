@@ -203,7 +203,7 @@ const generateLangchainCompletion = async (docId: string, question: string) => {
   const historyAwareRetrievalPrompt = ChatPromptTemplate.fromMessages([
     [
       "system",
-      "Answer the user's questions based on the below context:\n\n{context}",
+      "Role: You are a helpful assistant with a friendly and engaging personality.You are an expert in analyzing & summarizing documents and answering questions based on the below context provided:\n\n{context}",
     ],
 
     ...chatHistory, // Insert the actual chat history here
